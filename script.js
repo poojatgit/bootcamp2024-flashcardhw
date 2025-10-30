@@ -40,22 +40,5 @@ document.getElementById("prev-btn").addEventListener("click", () => {
     displayCard();
 });
 
-document.getElementById("add-card-btn").addEventListener("click", () => {
-    const newTerm = document.getElementById("new-term").value.trim();
-    const newDefinition = document.getElementById("new-definition").value.trim();
-
-    if (newTerm && newDefinition) {
-        flashcards.push({ term: newTerm, definition: newDefinition });
-
-        document.getElementById("new-term").value = "";
-        document.getElementById("new-definition").value = "";
-
-        currentIndex = flashcards.length - 1;
-        showingTerm = true;
-        displayCard();
-    } else {
-        alert("Please enter both a term and a definition!");
-    }
-});
 // This line will display the card when the page is refreshed
 window.onload = displayCard;
